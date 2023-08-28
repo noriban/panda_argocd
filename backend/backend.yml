@@ -18,7 +18,7 @@ spec:
         app: backend
     spec:
       containers:
-      - image: noriban/devopscoreback
+      - image: noriban/devopscoreback:RC-7.d2579a6
         name: backend
         ports:
         - containerPort: 5001
