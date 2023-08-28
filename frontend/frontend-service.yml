@@ -12,10 +12,7 @@ spec:
     protocol: TCP
     targetPort: 5000
   selector:
-    app: frontend-service
+    app: frontend
   type: ClusterIP
-  env:
-   - name: BACKEND_URL
-     value: http://backend-service:5001
 status:
   loadBalancer: {}
