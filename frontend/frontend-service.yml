@@ -8,11 +8,12 @@ metadata:
 spec:
   ports:
   - name: "5000"
+    nodePort: 30080
     port: 5000
     protocol: TCP
     targetPort: 5000
   selector:
-    app: frontend
-  type: ClusterIP
+    app: frontend-service
+  type: NodePort
 status:
   loadBalancer: {}
