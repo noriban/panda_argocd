@@ -3,24 +3,24 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: backend
-  name: backend
+    app: frontend
+  name: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: frontend
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: backend
+        app: frontend
     spec:
       containers:
-      - image: noriban/devopscoreback
-        name: backend
+      - image: noriban/devopscorefront
+        name: devopscorefront
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
         resources: {}
 status: {}
