@@ -7,13 +7,10 @@ metadata:
   name: frontend-service
 spec:
   ports:
-  - name: "5000"
-    nodePort: 30080
-    port: 5000
+  - name: http
+    port: 80
     protocol: TCP
-    targetPort: 5000
+    targetPort: 80
   selector:
     app: frontend
-  type: NodePort
-status:
-  loadBalancer: {}
+  type: LoadBalancer
